@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <div id="nav" class="navbar">
-      <router-link v-for="link in links" :key="link.Title" :to="link.To" class="nav">{{link.Title}}</router-link>
+      <router-link
+        v-for="link in links"
+        :key="link.Title"
+        :to="link.To"
+        class="nav"
+      >{{ link.Title }}</router-link>
     </div>
     <div href="javascript:void(0);" class="icon nav" v-on:click="toggleCollapse">
       <b>Ahmed ElSabbagh</b>
@@ -9,7 +14,7 @@
     </div>
     <div id="collapseBar">
       <router-link v-for="link in links" :key="link.Title" :to="link.To" class="collapseNav">
-        <div v-on:click="toggleCollapse">{{link.Title}}</div>
+        <div v-on:click="toggleCollapse">{{ link.Title }}</div>
       </router-link>
     </div>
     <router-view class="small-container" />
@@ -39,6 +44,10 @@ export default {
         {
           Title: "Achievements",
           To: "/achievements"
+        },
+        {
+          Title: "Contacts",
+          To: "/contacts"
         }
       ]
     };
@@ -75,6 +84,10 @@ export default {
   color: green;
   text-decoration: none;
 }
+.nav {
+  width: 10em;
+}
+
 .icon {
   display: none;
 }

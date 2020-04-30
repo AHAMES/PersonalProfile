@@ -1,7 +1,7 @@
 <template>
   <div id="PresentationCard">
-    <img :src="myPicture" class="profilePic" />
-    <p v-html="aboutMe">{{aboutMe}}</p>
+    <img :src="myPicture" class="profilePic" loading="lazy" />
+    <p v-html="aboutMe">{{ aboutMe }}</p>
   </div>
 </template>
 
@@ -41,6 +41,7 @@ export default {
   justify-content: space-evenly;
   padding-top: 1em;
   padding-left: 1em;
+  padding-right: 0.5em;
   padding-bottom: 1em;
 }
 
